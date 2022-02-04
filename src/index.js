@@ -144,11 +144,11 @@ class Web extends React.Component {
         <div className="web-menu">
           <Menu />
         </div>
-        <div className="web-cartas">
-          <Cartas />
-        </div>
         <div className="web-form">
           <Formulario />
+        </div>
+        <div className="web-cartas">
+          <Cartas />
         </div>
       </div>
     );
