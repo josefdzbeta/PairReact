@@ -112,17 +112,26 @@ function Cartas() {
 
 
   return (
-    <div className="cartas">
+    <RandomCartas />
+    /* <div className="cartas">
       <RandomCartas />
-    </div>
+    </div> */
   );
 }
 
 function RandomCartas() {
   let numeroRand = generarRandom(3, 6)
-  return (
+  let arrayCartas = []
+  for (let i = 0; i < numeroRand; i++) {
+    arrayCartas.push(<p key ={i+1}>Carta {i + 1}</p>)
+  }
+
+  return(
+    <div>{arrayCartas}</div>
+  )
+  /* return (
     <div>1</div>
-  );
+  ); */
 }
 
 class Tablero extends React.Component {
