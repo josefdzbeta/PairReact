@@ -120,13 +120,22 @@ function Cartas() {
 }
 
 function RandomCartas() {
+  
   let numeroRand = generarRandom(3, 6)
   let arrayCartas = []
+  let arrayTitulos = ['Hola mundo', 'FFX', 'Yate', 'Jeff Bezos', 'React']
+  let arraytexto = ['Este es el primer texto escrito', 'Yo precedo al antepenúltimo', '¿Quién soy?', 'Estoy entre el tercero y el último', 'Estoy al final']
+
+  /* Bucle que genera una estructura de cartas con titulo y texto aleatorios */
   for (let i = 0; i < numeroRand; i++) {
-    arrayCartas.push(<p key ={i+1}>Carta {i + 1}</p>)
+    arrayCartas.push(
+      <div key={i + 1}>
+        <p>{arrayTitulos[generarRandom(1,5)]}</p>
+        <p>{arraytexto[generarRandom(1,5)]}</p>
+      </div>)
   }
 
-  return(
+  return (
     <div>{arrayCartas}</div>
   )
   /* return (
