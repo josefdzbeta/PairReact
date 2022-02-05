@@ -61,8 +61,7 @@ function Opciones(props) {
 function Menu() {
   let items = []
   for (let i = 0; i < 3; i++) {
-    items.push(<li><a href='#'>Opcion {i + 1}</a></li>)
-
+    items.push(<li key={i}><a href='#'>Opcion {i + 1}</a></li>)
   }
   return (
     <ul>
