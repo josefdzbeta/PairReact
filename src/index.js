@@ -3,16 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 //Formulario
-class Formulario extends React.Component{
-  constructor (props){
+class Formulario extends React.Component {
+  constructor(props) {
     super(props)
-    this.state = {value: ''};
-    
+    this.state = { value: '' };
+
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
   }
   handleChange(event) {
-    this.setState({value: event.target.value});
+    this.setState({ value: event.target.value });
   }
 
   handleSubmit(event) {
@@ -30,18 +30,18 @@ class Formulario extends React.Component{
   }
 }
 
-class Inputs extends React.Component{
-  render(){
-    return(
+class Inputs extends React.Component {
+  render() {
+    return (
       <div>
         <label>
           Nombre
-          <input type="text" placeholder='Nombre'/>
+          <input type="text" placeholder='Nombre' />
         </label>
         <br />
         <label>
           Apellidos
-          <input type="text" placeholder='Apellidos'/>
+          <input type="text" placeholder='Apellidos' />
         </label>
         <br />
         <input type="submit" value="Submit" />
@@ -53,20 +53,24 @@ class Inputs extends React.Component{
 
 /* MENU */
 function Opciones(props) {
-  return(
+  return (
     <li>Opcion {props.num}</li>
   )
 }
 
-function Menu(){
-  return(
+function Menu() {
+  let items = []
+  for (let i = 0; i < 3; i++) {
+    items.push(<li><a href='#'>Opcion {i + 1}</a></li>)
+
+  }
+  return (
     <ul>
-      <Opciones num="1"/>
-      <Opciones num="2"/>
-      <Opciones num="3"/>
+      {items}
     </ul>
   )
 }
+
 /* Prueba para formulario */
 
 /* function Input(prop) {
@@ -108,16 +112,16 @@ function Formulario(){
 function Cartas() {
 
 
-  return(
+  return (
     <div className="cartas">
       <RandomCartas />
     </div>
   );
 }
 
-function RandomCartas(){
-  let numeroRand= generarRandom(3,6)
-  return(
+function RandomCartas() {
+  let numeroRand = generarRandom(3, 6)
+  return (
     <div>1</div>
   );
 }
@@ -132,7 +136,7 @@ class Tablero extends React.Component {
   }
 
   handleClick(i) {
- 
+
   }
 
 }
@@ -156,8 +160,8 @@ class Web extends React.Component {
 }
 
 
-function generarRandom(min,max){
-  return Math.floor((Math.random() * (max-min)) +min);
+function generarRandom(min, max) {
+  return Math.floor((Math.random() * (max - min)) + min);
 }
 
 
@@ -167,4 +171,3 @@ ReactDOM.render(
   <Web />,
   document.getElementById('root')
 );
- 
