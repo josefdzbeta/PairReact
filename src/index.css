@@ -1,0 +1,48 @@
+body {
+    background: #fd746c;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ff9068, #fd746c);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ff9068, #fd746c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+ul li{
+    display: inline-block;
+    margin: 50px;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    color: #156ae9;
+    text-decoration: none;
+    cursor: pointer;
+}
+input{
+    width:50%;
+    border:2px solid #aeb1b6;
+    border-radius:4px;
+    margin:8px 0;
+    outline:none;
+    padding:8px;
+    box-sizing:border-box;
+    transition:.3s;
+}
+div form{
+    text-align: center;
+}
+.web{
+    display: flex;
+    flex-direction: column;
+}
+.web-cartas{
+    display: inline-block;
+    border-radius: 8px;
+    background-color: rgba(0, 109, 252, 0.171);
+    border: 2px solid #156ae9 ;
+    margin: 50px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+div p{
+    margin: 50px;
+}
